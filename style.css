@@ -1,0 +1,221 @@
+:root {
+  --primary-color: #3D0302;
+  --primary-color-hover: #8D2B29;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 300px;
+  padding: .75rem;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  box-shadow: inset 0 0 1px white;
+  color: var(--primary-color);
+}
+
+h1, h2, p {
+  line-height: 1.3;
+  margin: 0;
+}
+
+p {
+  margin: .5rem 0;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+button:focus, a:focus {
+  outline: none;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: 600;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #999;
+  color: #aaa;
+}
+
+h2 {
+  font-size: 1rem;
+  font-family: "Georgia", serif;
+  padding: .3rem 0;
+}
+
+.drinks_list_container {
+  display: none;
+  padding: .5rem 0;
+}
+
+.drinks_list_container--show {
+  display: block;
+}
+
+.drinks_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.drinks_list li {
+  margin-left: .5rem;
+  padding-left: .75rem;
+  border-left: .5rem solid #ddd;
+}
+
+.drinks_list-link {
+  font-family: "Georgia", serif;
+  font-weight: bold;
+}
+
+.drinks_list-link:hover {
+  color: var(--primary-color-hover);
+}
+
+.drinks_list-edit {
+  color: #999;
+  text-decoration: underline;
+  padding-left: .3rem;
+  cursor: pointer;
+}
+
+.drinks_list-edit:hover {
+  color: #bbb;
+}
+
+.no_drinks_yet {
+  display: none;
+}
+
+.no_drinks_yet--show {
+  display: block;
+}
+
+.not_on_drink_page {
+  display: none;
+}
+
+.not_on_drink_page--show {
+  display: block;
+}
+
+.see_all_drinks {
+  margin: 1rem 0;
+}
+
+.padded_container {
+  //margin-top: 1rem;
+  padding: .75rem;
+  background-color: #f3f3f3;
+}
+
+.drink_form {
+  display: none;
+  margin: .75rem;
+}
+
+.drink_form--on_drink_page {
+  display: block;
+}
+
+input, label {
+  margin: .75rem 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 1px 5px rgba(0,0,0,.08);
+  padding: .5rem;
+  font-size: 1em;
+  color: #222;
+}
+
+button {
+  border: none;
+  background-color: #e9e9e9;
+  font-size: 1em;
+  padding: .6rem .8rem;
+  border-radius: 3px;
+  margin: .5rem 0;
+  color: #222;
+  cursor: pointer;
+  box-shadow: inset 0 -2px 3px rgba(123,123,123,.07),
+    inset 0 1px 3px rgba(255,255,255,.21);
+}
+
+button:hover {
+  background-color: #d9d9d9;
+}
+
+.save_error, .save_message {
+  display: none;
+  padding: .5rem 0;
+}
+
+.save_error {
+  color: red;
+}
+
+.save_error--has_error {
+  display: block;
+}
+
+.save_message--success {
+  display: block;
+}
+
+.created_button {
+}
+
+.created_button:before {
+  content: "\2610";
+  padding-right: .5rem;
+  font-size: 1.2rem;
+  line-height: .7;
+  display: inline-block;
+  width: 1rem;
+}
+
+.created_button[value="true"] {
+  background-color: #F3D66B;
+}
+
+.created_button-created {
+  display: none;
+}
+
+.created_button[value="true"] .created_button-not_created {
+  display: none;
+}
+
+.created_button[value="true"] .created_button-created {
+  display: inline;
+}
+
+.created_button[value="true"]:before {
+  content: "\2612";
+  //transform: scale(0.8);
+  //transform-origin: 30% 60%;
+}
+
+.save_drink {
+  background-color: #BDE012;
+  font-weight: 600;
+}

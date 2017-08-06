@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Personalized Tuxedo No.2 List",
+  "description": "Save the drinks you've made and any notes you want for later reference",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "http://tuxedono2.com/"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["http://tuxedono2.com/*"],
+      "css": ["tux_extension.css"],
+      "js": ["tux_extension.js"]
+    }
+  ]
+}

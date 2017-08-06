@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Personalized Tuxedo No.2 List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h1>Tuxedo No.2 Drinks</h1>
+
+    <div class="padded_container drink_form">
+      This drink:
+      <h2 id="drink_name"></h2>
+
+      <button class="created_button" name="created" value="false">
+        <span class="created_button-not_created">I haven't made this drink.</span>
+        <span class="created_button-created">I've made this drink.</span>
+      </button>
+      <br>
+      <textarea class="notes" rows="6" placeholder="This drink was extra delicious because... (optional)"></textarea>
+      <br>
+      <button class="save_drink">Save</button>
+      <div id="save_error" class="save_error">
+        Oops, you have to select 'made this drink' to save it!
+      </div>
+      <div id="save_message" class="save_message">
+        Notes saved!
+      </div>
+    </div>
+
+    <p class="no_drinks_yet">Looks like you don't have any drinks yet!</p>
+    <div class="drinks_list_container">
+      <p>Drinks I've Made:</p>
+      <ul class="drinks_list"></ul>
+
+      <div class="padded_container not_on_drink_page">
+        Go to a drink page to save that drink &amp; add a note!
+      </div>
+    </div>
+
+    <button class="see_all_drinks">See all your saved drinks</button>
+  </body>
+</html>
